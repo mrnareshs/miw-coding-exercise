@@ -22,7 +22,7 @@ spring:
 
 surgeprice:
   config:
-    surgeByPercent: .10
-    surgeThreshold: 3
-    surgeInterval: 10
+    surgeByPercent: 10
+    surgeThreshold: 10
+    surgeInterval: 3600
 
