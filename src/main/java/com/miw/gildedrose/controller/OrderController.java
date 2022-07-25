@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.security.Principal;
 import java.util.List;
 
@@ -49,7 +50,7 @@ public class OrderController {
      * @throws Exception
      */
     @PostMapping
-    public OrderDTO addOrder(@RequestBody OrderDTO orderDTO, Principal principal) throws Exception {
+    public OrderDTO addOrder(@RequestBody @Valid OrderDTO orderDTO, Principal principal) throws Exception {
         log.info("Inside addOrder method  of OrderController");
         return orderService.saveOrder(orderDTO, principal.getName());
     }

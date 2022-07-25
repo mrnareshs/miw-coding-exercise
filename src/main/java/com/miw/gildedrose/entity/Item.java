@@ -21,7 +21,7 @@ public class Item {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
-    @NotNull
+    @NotNull(message = "Name is Required.")
     private String name;
     private String description;
     @NotNull
